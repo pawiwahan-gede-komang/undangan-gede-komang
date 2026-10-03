@@ -26,6 +26,11 @@ if (namaTamu) {
 
 
 /* ---------- 2. Hitung mundur ---------- */
+/* ---------- 2. Hitung mundur ---------- */
+var WAKTU_ACARA = "2026-10-16T17:00:00+08:00";
+var KALENDER_MULAI = "20261016T090000Z";
+var KALENDER_SELESAI = "20261016T100000Z";
+
 var waktuAcara = new Date(WAKTU_ACARA).getTime();
 
 function perbaruiHitungMundur() {
