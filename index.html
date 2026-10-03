@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>I Gede Putra S &amp; Ni Komang Budiasih - Undangan Pawiwahan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== 1. SAMPUL ===== -->
+  <section class="dark" id="cover">
+    <div class="frame">
+      <div class="gold it lead">Om Swastyastu</div>
+      <div class="small mt-lg">Manusa Yadnya Pawiwahan</div>
+      <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+      <img class="kartun" src="kartun-berdua.png" alt="Ilustrasi Gede dan Komang">
+      <h1>Gede</h1>
+      <div class="gold it amp amp-sm">&amp;</div>
+      <h1>Komang</h1>
+      <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+      <div class="lead">Jumat, 16 Oktober 2026</div>
+      <div class="guest">
+        <div class="guest-label">Kepada Yth. Bapak/Ibu/Saudara/i</div>
+        <div class="guest-name" id="tamu">Tamu Undangan</div>
+      </div>
+      <a class="btn" id="tombol-buka" href="#mempelai">Buka Undangan</a>
+    </div>
+  </section>
+
+  <!-- ===== 2. MEMPELAI ===== -->
+  <section class="light" id="mempelai">
+    <div class="gold it lead">Om Swastyastu</div>
+    <p class="it">Atas asung kerta wara nugraha Ida Sang Hyang Widhi Wasa / Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan Upacara Manusa Yadnya Pawiwahan (pernikahan):</p>
+    <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+
+    <h2>I Gede Putra S</h2>
+    <p class="flat">Anak pertama dari pasangan<br>I Ketut Sueda (Alm) dan Nyoman Swari</p>
+
+    <div class="gold it amp">&amp;</div>
+
+    <h2>Ni Komang Budiasih</h2>
+    <p class="flat">Anak ketiga dari pasangan<br>Made Parsa dan Ni Luh Sukanadi</p>
+  </section>
+
+  <!-- ===== 3. HITUNG MUNDUR ===== -->
+  <section class="dark" id="hitung">
+    <div class="small">Menuju Hari Bahagia</div>
+    <div class="cd">
+      <div><b id="hari">0</b><span>Hari</span></div>
+      <div><b id="jam">0</b><span>Jam</span></div>
+      <div><b id="menit">0</b><span>Menit</span></div>
+      <div><b id="detik">0</b><span>Detik</span></div>
+    </div>
+    <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+    <p class="it lead-sm">Jumat, 16 Oktober 2026</p>
+    <a class="btn" id="tombol-kalender" href="#">Simpan ke Kalender</a>
+  </section>
+
+  <!-- ===== 4. RANGKAIAN ACARA ===== -->
+  <section class="light" id="acara">
+    <h2>Rangkaian Acara</h2>
+    <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+
+    <div class="card">
+      <h3>UPACARA PAWIWAHAN</h3>
+      <p>Jumat, 16 Oktober 2026<br>Pukul 17.00 WITA - selesai<br>Desa Bumi Sejahtera<br>Kecamatan Kaliorang</p>
+    </div>
+
+    <div class="mapbox">
+      <div class="small tight">Lokasi</div>
+      <a class="btn" href="https://maps.google.com/?q=Desa+Bumi+Sejahtera+Kaliorang" target="_blank" rel="noopener">Buka Google Maps</a>
+    </div>
+  </section>
+
+    <!-- ===== 5. RSVP & HADIAH DIGITAL ===== -->
+  <section class="dark" id="rsvp">
+    <h2>Konfirmasi Kehadiran</h2>
+    <p class="it">Ditunggu Kehadirannya</p>
+
+    <form id="form-rsvp">
+      <label>Nama
+        <input id="nama" required>
+      </label>
+      <label>Kehadiran
+        <select id="kehadiran">
+          <option>Hadir</option>
+          <option>Tidak hadir</option>
+          <option>Masih ragu</option>
+        </select>
+      </label>
+      <label>Jumlah tamu
+        <input id="jumlah" type="number" min="1" max="10" value="1">
+      </label>
+      <label>Ucapan &amp; doa
+        <textarea id="ucapan" rows="3"></textarea>
+      </label>
+      <div class="center"><button class="btn" type="submit">Kirim lewat WhatsApp</button></div>
+    </form>
+
+    <div id="wadah-ucapan" hidden>
+      <div class="small tight">Ucapan &amp; Doa</div>
+      <div id="daftar-ucapan"></div>
+    </div>
+
+    <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+
+    <div class="small tight">Hadiah Digital (opsional)</div>
+    <p class="flat gap-top">BRI <b id="rekening">788401020830531</b><br>a.n. NI KOMANG BUDIASIH</p>
+    <button class="btn" id="tombol-salin" type="button">Salin Nomor Rekening</button>
+  </section>
+
+  <!-- ===== 6. PENUTUP ===== -->
+  <section class="light" id="tutup">
+    <h2>Terima Kasih</h2>
+    <div class="orn"><i></i><b class="s"></b><b></b><b class="s"></b><i></i></div>
+    <p class="it">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+    <p class="gold it lead">Om Santih, Santih, Santih, Om</p>
+    <p class="flat">Kami yang berbahagia</p>
+    <p class="lead"><b>Keluarga Nyoman Swari<br>Keluarga Made Parsa</b></p>
+    <p class="gold it amp">Gede &amp; Komang</p>
+  </section>
+
+  <!-- ===== MUSIK (OPSIONAL) =====
+       Taruh musik.mp3 di folder ini, lalu hapus baris yang hanya berisi
+       tanda pembuka dan penutup komentar di sekitar dua elemen berikut. -->
+  
+  <audio id="musik" src="musik.mp3" loop></audio>
+  <!-- <button class="btn btn-musik" id="tombol-musik" type="button">Musik</button>
+  -->
+
+  <script src="script.js"></script>
+</body>
+</html>

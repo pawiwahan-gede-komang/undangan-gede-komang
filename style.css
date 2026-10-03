@@ -1,0 +1,215 @@
+/* =====================================================
+   UNDANGAN PERNIKAHAN BALI - style.css
+   Ganti warna cukup di bagian "WARNA" di bawah ini.
+   ===================================================== */
+
+/* ---------- WARNA ---------- */
+:root {
+  --green: #1F3D2B;   /* hijau tua (latar bagian gelap) */
+  --gold:  #C99A3B;   /* emas (aksen) */
+  --cream: #F6EEDC;   /* krem (latar bagian terang) */
+  --sand:  #E6D9BC;   /* krem gelap (kartu) */
+  --ink:   #5A3A22;   /* warna teks isi */
+  --head:  #1F3D2B;   /* warna judul */
+
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* Mode gelap (mengikuti pengaturan HP tamu) */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --cream: #16281d;
+    --sand:  #22392a;
+    --ink:   #E9DCC0;
+    --head:  #F6EEDC;
+  }
+}
+:root[data-theme="dark"] {
+  --cream: #16281d;
+  --sand:  #22392a;
+  --ink:   #E9DCC0;
+  --head:  #F6EEDC;
+}
+
+/* ---------- DASAR ---------- */
+html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--green);
+  color: var(--ink);
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 18px;
+  text-align: center;
+}
+
+section {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 56px 28px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.light { background: var(--cream); }
+.dark  { background: var(--green); color: #F6EEDC; }
+
+/* ---------- JUDUL ---------- */
+h1, h2, h3 { font-weight: 700; margin: 0; color: var(--head); }
+.dark h1, .dark h2 { color: #F6EEDC; }
+h1 { font-size: 46px; line-height: 1.1; }
+h2 { font-size: 34px; margin-bottom: 8px; }
+
+/* ---------- TEKS BANTU ---------- */
+.gold { color: var(--gold); }
+.it { font-style: italic; }
+.center { text-align: center; }
+.flat { margin: 0; }               /* paragraf tanpa jarak */
+.gap-top { margin: 10px 0 0; }
+
+.lead    { font-size: 22px; }
+.lead-sm { font-size: 20px; }
+
+.small {
+  font-size: 14px;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.small.tight { letter-spacing: .2em; }
+.mt-lg { margin-top: 28px; }
+
+.amp    { font-size: 36px; margin: 14px 0; }
+.amp-sm { font-size: 32px; margin: 4px 0; }
+
+/* ---------- ORNAMEN ---------- */
+.orn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0;
+  width: 100%;
+}
+.orn i { flex: 1; max-width: 90px; height: 1px; background: var(--gold); }
+.orn b { width: 10px; height: 10px; background: var(--gold); transform: rotate(45deg); }
+.orn b.s { width: 6px; height: 6px; }
+
+/* ---------- SAMPUL ---------- */
+.frame {
+  border: 1px solid var(--gold);
+  outline: 1px solid var(--gold);
+  outline-offset: 6px;
+  padding: 40px 22px;
+  width: 100%;
+}
+.guest { border: 1px solid var(--gold); padding: 10px 18px; margin-top: 28px; font-size: 20px; }
+.guest-label { font-size: 13px; color: var(--gold); }
+.guest-name  { margin-top: 4px; }
+
+/* ---------- TOMBOL ---------- */
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #1F3D2B;
+  border: 0;
+  padding: 12px 26px;
+  font: 700 17px 'Cormorant Garamond', Georgia, serif;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 14px;
+}
+.btn-musik { position: fixed; right: 14px; bottom: 14px; z-index: 9; }
+
+/* ---------- HITUNG MUNDUR ---------- */
+.cd { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
+.cd div { border: 1px solid var(--gold); min-width: 68px; padding: 10px 4px; }
+.cd b { display: block; font-size: 30px; color: var(--gold); }
+.cd span { font-size: 12px; letter-spacing: .15em; text-transform: uppercase; }
+
+/* ---------- ACARA & LOKASI ---------- */
+.card {
+  background: var(--sand);
+  border: 1px solid var(--gold);
+  padding: 24px 18px;
+  width: 100%;
+  margin-top: 18px;
+}
+.card h3 { font-size: 22px; letter-spacing: .2em; color: var(--gold); }
+.card p { margin: 8px 0 0; }
+
+.dresscode { margin-top: 22px; }
+
+.mapbox {
+  background: var(--sand);
+  border: 1px solid var(--gold);
+  padding: 46px 18px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* ---------- FORM RSVP ---------- */
+form { width: 100%; text-align: left; }
+label { font-size: 15px; }
+input, textarea, select {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  border: 1px solid var(--gold);
+  background: var(--cream);
+  color: var(--ink);
+  font: inherit;
+  font-size: 17px;
+}
+
+#wadah-ucapan[hidden] { display: none; }
+
+#wadah-ucapan {
+  margin-top: 24px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+}
+
+#daftar-ucapan {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.ucapan {
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+}
+
+.ucapan b { margin-right: 8px; }
+.ucapan span { font-size: 0.8em; opacity: 0.7; }
+.ucapan p { margin: 6px 0 0; }
+
+.kosong { text-align: center; opacity: 0.7; font-style: italic; }
+
+#mempelai {
+  justify-content: flex-start;
+  padding-top: 90px;
+}
+
+.kartun {
+  display: block;
+  margin: 12px auto;
+  height: auto;
+}
+
+#cover .kartun {
+  max-height: 34vh;
+  width: auto;
+  max-width: 78%;
+}
